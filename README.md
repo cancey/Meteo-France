@@ -11,3 +11,4 @@ Note : ces cahiers font appel à des paquets à installer (si ce n'est déjà fa
 * cartographie de l'Europe (format SHP) : https://www.naturalearthdata.com/downloads/10m-cultural-vectors/
 * liste des communes françaises : https://planete-excel.fr/liste-des-communes-de-france-au-format-excel/
 * MNT Alpes tiré de https://ec.europa.eu/eurostat/web/gisco/geodata/digital-elevation-model/copernicus#Elevation
+Mise à jour : juin 2025
