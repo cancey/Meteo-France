@@ -4,6 +4,7 @@ scripts python pour analyser les données météo en France
 1. creation_liste_postes : sert à générer la liste des postes de Météo-France dans un département ou un ensemble de départements. Une carte est également générée.
 2. extraction-poste : sert à extraire les séries de données depuis le site de Météo-France. La procédure change un tout peu selon que le poste est climatologique ou autre (nivo-météo, Nivôse). Le script extrait les données, trace les courbes et fait une analyse des valeurs extrêmes.
 3. safran_extraction : analyse les données safran pour la région autour du poste de mesures (l'information est fournie via un fichier de configuration yaml)
+4. modules : module_extraction.py, module_rapport.py, module_valeurs_extremes.py
 
 Note : ces cahiers font appel à des paquets à installer (si ce n'est déjà fait) et des fichiers supplémentaires de données topographiques :
 * [https://france-geojson.gregoiredavid.fr/repo/departements.geojson](https://www.data.gouv.fr/fr/datasets/r/90b9341a-e1f7-4d75-a73c-bbc010c7feeb) : limites départementales
@@ -11,4 +12,12 @@ Note : ces cahiers font appel à des paquets à installer (si ce n'est déjà fa
 * cartographie de l'Europe (format SHP) : https://www.naturalearthdata.com/downloads/10m-cultural-vectors/
 * liste des communes françaises : https://planete-excel.fr/liste-des-communes-de-france-au-format-excel/
 * MNT Alpes tiré de https://ec.europa.eu/eurostat/web/gisco/geodata/digital-elevation-model/copernicus#Elevation
-Mise à jour : juin 2025
+* si on utilise la couche topographique (par défaut c'est celle de l'IGN) de Thunderforest, il faut acquérir une clé API (https://www.thunderforest.com) et la mettre dans le fichier module_extraction.py
+*  en décembre 2025, Météo-France a encore changé le format des métadonnées, ce qui a nécessité une révision du fichier principal d'extraction
+
+Mise à jour : avril 2026
+
+Marche à suivre :
+1. valider les adresses des dossiers (de la forme répertoire_*)
+2. créer le fichier des postes (p. ex. liste_synthétique_Alpes_Nord.xlsx pour les Alpes du Nord) qui contient les métadonnées essentielles des différents postes. Ce fichier est généré par le cahier creation_liste_postes.ipynb
+3. exécuter les différences cellules du cahier extraction-poste.ipynb, sélectionner le poste à étudier, etc. Un rapport pdf est généré. Ce cahier crée quelques figures montrant l'évolution des précipitations et des températures, et exporte les valeurs journalières des précipitations liquides et solides, et des températures
