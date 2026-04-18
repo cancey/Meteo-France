@@ -5,6 +5,7 @@ scripts python pour analyser les données météo en France
 2. extraction-poste : sert à extraire les séries de données depuis le site de Météo-France. La procédure change un tout peu selon que le poste est climatologique ou autre (nivo-météo, Nivôse). Le script extrait les données, trace les courbes et fait une analyse des valeurs extrêmes.
 3. safran_extraction : analyse les données safran pour la région autour du poste de mesures (l'information est fournie via un fichier de configuration yaml)
 4. modules : module_extraction.py, module_rapport.py, module_valeurs_extremes.py
+5. fichiers supplémentaires : meteo_api.py (API de Météo-France, connexion avec le serveur de MF, extraction des données), postesNivo.csv (liste des postes de nivo-observation)
 
 Note : ces cahiers font appel à des paquets à installer (si ce n'est déjà fait) et des fichiers supplémentaires de données topographiques :
 * [https://france-geojson.gregoiredavid.fr/repo/departements.geojson](https://www.data.gouv.fr/fr/datasets/r/90b9341a-e1f7-4d75-a73c-bbc010c7feeb) : limites départementales
